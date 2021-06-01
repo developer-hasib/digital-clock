@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    
+</head>
+<body style="font-family: 'Redressed', cursive; display: grid; place-items: center; height: 100vh;" >
+    
+    
+        <div style="width:450px; height:450px; background:black; color: whitesmoke; display: grid; place-items: center;border-radius: 30%; ">
+        
+            <h2 class=" " id="colck"></h2>
+            <h2 id="clndr"></h2>
+            </div>
+
+    <script>
+        
+    setInterval (function(){
+            var date = new Date();
+            var hr = date.getHours();
+            var amPm = "";
+        if(hr == 0){ hr = 12;}
+        else if( hr > 12 && hr <= 23){hr = hr - 12 ; amPm = " PM";}
+        else{amPm = " AM"}
+
+            var mn = date.getMinutes();
+            var se = date.getSeconds();
+            if(hr.toString().length < 2){ hr ="0" + hr};
+            if(mn.toString().length < 2){ mn ="0" + mn};
+            if(se.toString().length < 2){ se ="0" + se};
+            var mydate = hr + " : " + mn + " : " + se + amPm;
+
+            document.querySelector("#colck").innerHTML = mydate;
+
+    }, 1000)
+
+    
+        
+    var mydate = new Date();
+    var mont = mydate.getMonth();
+    var dy = mydate.getDate();
+    var yr = mydate.getFullYear();
+    var mt = ["Janu","Febu","March","April","May","June","July","Aug","Sep","Oct","Nev","Dec"];
+    var fldate = dy + " " + mt[mont] + " " + yr;
+
+    document.querySelector("#clndr").innerHTML = fldate;
+    
+
+
+        
+
+        
+
+
+    </script>
+</body>
+</html>
