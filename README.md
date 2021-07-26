@@ -1,2 +1,2 @@
 # digital-clock
-Live preview : https://hasibulislamthedeveloper.github.io/digital-clock/
+Live preview : https://developer-hasib.github.io/digital-clock/
